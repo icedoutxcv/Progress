@@ -9,13 +9,10 @@ import Foundation
 import UIKit
 
 public extension UIColor {
-
     var codedString: String?{
-        do{
+        do {
             let data = try NSKeyedArchiver.archivedData(withRootObject: self, requiringSecureCoding: true)
-
             return data.base64EncodedString()
-
         }
         catch let error{
             print("Error converting color to coded string: \(error)")
@@ -30,6 +27,5 @@ public extension UIColor {
         }
 
         return try? NSKeyedUnarchiver.unarchivedObject(ofClass: UIColor.self, from: data)
-
     }
 }

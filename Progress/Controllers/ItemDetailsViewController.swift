@@ -26,7 +26,7 @@ class ItemDetailsViewController: UIViewController, UITextViewDelegate, ItemDetai
     }
     
     func setup() {
-        navigationItem.title = "Notes"
+        navigationItem.title = "Details"
         navigationController?.navigationBar.barStyle = .default
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = .systemBackground
@@ -51,18 +51,33 @@ class ItemDetailsViewController: UIViewController, UITextViewDelegate, ItemDetai
         view = detailsView
         detailsView.notesTextView.delegate = self
         detailsView.notesTextView.becomeFirstResponder()
+        detailsView.unitButton.addTarget(self, action: #selector(showOptions), for: .touchUpInside)
         detailsView.delegate = self
     }
     
+    @objc func showOptions() {
+        let ac = UIAlertController(title: "Units", message: "", preferredStyle: .alert)
+        
+        for unit in Units.items {
+            ac.addAction(UIAlertAction(title: unit.name, style: .default, handler: { (ac) in
+                self.detailsView.unitButton.setTitle(unit.name, for: .normal)
+            }))
+        }
+        present(ac, animated: true)
+    }
+    
     func didTappedDeleteButton() {
-        delete()
+        showConfimDeleteAlert()
     }
 
     @objc func save() {
         guard let model = model else { return }
         guard let notes = detailsView.notesTextView.text else { return }
+        guard let startValue = detailsView.startTextField.text else { return }
+        guard let endValue = detailsView.startTextField.text else { return }
+        guard let unit = detailsView.unitButton.titleLabel?.text else { return }
         
-        dataManager.editNote(item: model, notes: notes)
+        dataManager.edit(item: model, notes: notes, start: startValue, end: endValue, unit: unit)
         dismiss(animated: true, completion: nil)
     }
     
@@ -76,6 +91,20 @@ class ItemDetailsViewController: UIViewController, UITextViewDelegate, ItemDetai
     
     @objc func cancel() {
         dismiss(animated: true, completion: nil)
+    }
+     
+    func showConfimDeleteAlert() {
+        let alert = UIAlertController(title: "Delete", message: "Item will be deleted!", preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            self.delete()
+        }))
+
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+
+        present(alert, animated: true, completion: nil)
     }
 
 }

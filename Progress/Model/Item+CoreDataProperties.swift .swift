@@ -14,6 +14,9 @@ extension Item {
         return NSFetchRequest<Item>(entityName: "Item")
     }
 
+    @NSManaged public var start: String
+    @NSManaged public var end: String
+    @NSManaged public var unit: String
     @NSManaged public var name: String
     @NSManaged public var color: String
     @NSManaged public var type: String

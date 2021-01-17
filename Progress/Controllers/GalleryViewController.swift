@@ -39,7 +39,6 @@ class GalleryViewController: UIViewController, AddViewControllerDelegate, ItemDe
         tableView.reloadData()
     }
     
-    
     func didAddItem() {
         updateData()
     }

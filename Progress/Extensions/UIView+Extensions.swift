@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 enum Edge {
     case left

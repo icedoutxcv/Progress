@@ -24,8 +24,11 @@ class DataManager {
         return []
     }
     
-    func editNote(item: Item, notes: String) {
+    func edit(item: Item, notes: String, start: String, end: String, unit: String) {
         item.notes = notes
+        item.start = start
+        item.end = end
+        item.unit = unit
         
         do {
             try self.context.save()

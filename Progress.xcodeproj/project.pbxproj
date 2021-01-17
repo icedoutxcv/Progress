@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030F92E125B4875A00260AAD /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F92E025B4875A00260AAD /* Units.swift */; };
 		034D94BF25781E550096A236 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 034D94BD25781E550096A236 /* Model.xcdatamodeld */; };
 		0381D3892578228C005B42AF /* Item+CoreDataClass.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381D3882578228C005B42AF /* Item+CoreDataClass.swift.swift */; };
 		0381D38D257822CC005B42AF /* Item+CoreDataProperties.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381D38C257822CC005B42AF /* Item+CoreDataProperties.swift .swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		030F92E025B4875A00260AAD /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		034D94BE25781E550096A236 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		0381D3882578228C005B42AF /* Item+CoreDataClass.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift.swift"; sourceTree = "<group>"; };
 		0381D38C257822CC005B42AF /* Item+CoreDataProperties.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift .swift"; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				03DB722F257B99E500682F05 /* CellModel.swift */,
 				03B0A3812596130500462A5C /* FormModel.swift */,
 				03B0A387259613D400462A5C /* OptionListModel.swift */,
+				030F92E025B4875A00260AAD /* Units.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				03AE869A25AB469500B1B36C /* UIButton+Extension.swift in Sources */,
 				03DB7239257BB4BD00682F05 /* OptionListTableViewController.swift in Sources */,
 				0395C1E225AB2E8D009CD17A /* UIColor+Extensions.swift in Sources */,
+				030F92E125B4875A00260AAD /* Units.swift in Sources */,
 				03FE2ED6257409970048F93E /* DataSourceObject.swift in Sources */,
 				03B0A388259613D400462A5C /* OptionListModel.swift in Sources */,
 				03DB722B257B990600682F05 /* AddViewCell.swift in Sources */,
