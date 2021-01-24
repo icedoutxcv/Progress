@@ -27,18 +27,23 @@ struct CellModel {
     let icon: UIImage
     var title: String
     var subtitle: String
+    var textFieldFirst: String
+    var textFieldSecond: String
     let type: CellType
     
     enum CellType {
         case title
         case colors
         case types
+        case textFields
     }
         
-    init(icon: UIImage, title: String, subtitle: String, type: CellType, isSelected: Bool = false) {
+    init(icon: UIImage = UIImage(), title: String = "", subtitle: String = "", type: CellType, isSelected: Bool = false, textFieldFirst: String = "", textFieldSecond: String = "") {
         self.icon = icon
         self.title = title
         self.subtitle = subtitle
         self.type = type
+        self.textFieldFirst = textFieldFirst
+        self.textFieldSecond = textFieldSecond
     }
 }

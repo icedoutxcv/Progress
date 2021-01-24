@@ -12,9 +12,10 @@ class FormModel {
     var title = CellModel(icon: UIImage(), title: "Name", subtitle: "", type: .title)
     var colors = CellModel(icon: UIImage(systemName: "eyedropper")!, title: "Color", subtitle: ItemColor.stringColor(from: .blue), type: .colors)
     var types = CellModel(icon: UIImage(systemName: "tray")!, title: "Type", subtitle: ItemType.book.rawValue, type: .types)
+    var progress = CellModel(type: .textFields, textFieldFirst: "", textFieldSecond: "")
 
     func models() -> [CellModel] {
-        return [title, colors, types]
+        return [title, colors, types,  progress]
     }
 }
 

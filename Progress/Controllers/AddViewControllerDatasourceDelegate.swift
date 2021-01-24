@@ -22,9 +22,12 @@ extension AddViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: AddViewTitleCell.identifier, for: indexPath) as! AddViewTitleCell
             cell.name.delegate = self
             return cell
-        default:
+        case .colors, .types:
             let cell = tableView.dequeueReusableCell(withIdentifier: AddViewCell.identifier, for: indexPath) as! AddViewCell
             cell.configure(with: model)
+            return cell
+        case .textFields:
+            let cell = tableView.dequeueReusableCell(withIdentifier: AddViewProgressCell.identifier, for: indexPath) as! AddViewProgressCell
             return cell
         }
     }

@@ -44,6 +44,7 @@ class AddViewController: UIViewController, OptionListDelegate, UITextFieldDelega
         tableView = UITableView(frame: view.frame, style: .plain)
         tableView.register(AddViewCell.nib(), forCellReuseIdentifier: AddViewCell.identifier)
         tableView.register(AddViewTitleCell.nib(), forCellReuseIdentifier: AddViewTitleCell.identifier)
+        tableView.register(AddViewProgressCell.nib(), forCellReuseIdentifier: AddViewProgressCell.identifier)
         view = tableView
         
         self.tableView.delegate = self

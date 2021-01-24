@@ -42,10 +42,30 @@ class ItemDetailsViewController: UIViewController, UITextViewDelegate, ItemDetai
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: nil, action: #selector(save))
         
+        
+      let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+      detailsView.addGestureRecognizer(tap)
+        
         guard let model = model else { return }
      
         detailsView.configure(with: model)
     }
+    
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        let scrollPoint : CGPoint = CGPoint.init(x:0, y: textView.frame.origin.y)
+        self.detailsView.notesTextView.setContentOffset(scrollPoint, animated: true)
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+//        self.detailsView.notesTextView.setContentOffset(CGPoint.zero, animated: true)
+    }
+    
+    
     
     override func loadView() {
         view = detailsView

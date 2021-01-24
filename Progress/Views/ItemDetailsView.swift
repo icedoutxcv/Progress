@@ -105,6 +105,15 @@ class ItemDetailsView: UIView {
         
         return button
     }()
+    
+    var spacerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.clipsToBounds = true
+        view.backgroundColor = .separator
+        
+        return view
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -119,7 +128,7 @@ class ItemDetailsView: UIView {
     }
      
     func configure(with model: Item) {
-        titleLabel.text = model.name
+        titleLabel.text = "Notes"
         notesTextView.text = model.notes
         startTextField.text = model.start
         endTextField.text = model.end
@@ -129,6 +138,10 @@ class ItemDetailsView: UIView {
         } else {
             unitButton.setTitle(model.unit, for: .normal)
         }
+        
+//        if model.notes.isEmpty {
+//            notesTextView.text = "Notes"
+//        }
        
     }
     
@@ -142,40 +155,43 @@ class ItemDetailsView: UIView {
     }
     
     func setupHierarchy() {
-        addSubview(titleContainer)
-        titleContainer.addSubview(titleLabel)
-        
         addSubview(progressContainer)
         progressContainer.addArrangedSubview(startTextField)
         progressContainer.addArrangedSubview(endTextField)
         progressContainer.addArrangedSubview(unitButton)
-
-        addSubview(deleteButton)
         
-        addSubview(notesContainer)
-        notesContainer.addSubview(notesTextView)
+        addSubview(deleteButton)
+        addSubview(spacerView)
+    
+        addSubview(titleContainer)
+        titleContainer.addSubview(titleLabel)
+        
+//        addSubview(notesContainer)
+        addSubview(notesTextView)
     }
     
     func setupLayout() {
-            let margins = layoutMarginsGuide
-
-        titleContainer.anchor(top: margins.topAnchor, left: margins.leftAnchor, bottom: progressContainer.topAnchor, right: margins.rightAnchor, paddingTop: 15, paddingLeft: 15, paddingBottom: 0, paddingRight: 15, width: 0, height: 125, enableInsets: false)
-        titleLabel.anchor(top: titleContainer.topAnchor, left: titleContainer.leftAnchor, bottom: titleContainer.bottomAnchor, right: titleContainer.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0, enableInsets: false)
+        let margins = layoutMarginsGuide
         
-        
-        progressContainer.anchor(top: titleContainer.bottomAnchor, left: margins.leftAnchor, bottom: nil, right: margins.rightAnchor, paddingTop: 0, paddingLeft: 15, paddingBottom: 0, paddingRight: 15, width: 0, height: 35, enableInsets: false)
+        progressContainer.anchor(top: margins.topAnchor, left: margins.leftAnchor, bottom: nil, right: margins.rightAnchor, paddingTop: 30, paddingLeft: 15, paddingBottom: 0, paddingRight: 15, width: 0, height: 35, enableInsets: false)
         
         deleteButton.topAnchor.constraint(equalTo: progressContainer.bottomAnchor, constant: 15).isActive = true
-        deleteButton.anchor(top: nil, left: leftAnchor, bottom: notesContainer.topAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 15, paddingBottom: 0, paddingRight: 15, width: 0, height: 0, enableInsets: false)
+        deleteButton.centerXAnchor.constraint(equalTo: progressContainer.centerXAnchor).isActive = true
+
+        
+        spacerView.topAnchor.constraint(equalTo: deleteButton.bottomAnchor, constant: 15).isActive = true
+        spacerView.anchor(top: nil, left: leftAnchor, bottom: notesTextView.topAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 30, paddingRight: 0, width: 0, height: 1, enableInsets: false)
+        
+//        titleContainer.anchor(top: spacerView.bottomAnchor, left: margins.leftAnchor, bottom: notesContainer.topAnchor, right: margins.rightAnchor, paddingTop: 0, paddingLeft: 15, paddingBottom: 0, paddingRight: 15, width: 0, height: 125, enableInsets: false)
+//        titleLabel.anchor(top: titleContainer.topAnchor, left: titleContainer.leftAnchor, bottom: titleContainer.bottomAnchor, right: titleContainer.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0, enableInsets: false)
+        
+//        notesContainer.anchor(top: spacerView.bottomAnchor, left: leftAnchor, bottom: layoutMarginsGuide.bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0, enableInsets: false)
+        
+        notesTextView.anchor(top: nil, left: margins.leftAnchor, bottom: margins.bottomAnchor, right: margins.rightAnchor, paddingTop: 30, paddingLeft: 15, paddingBottom: 260, paddingRight: 15, width: 0, height: 0, enableInsets: false)
         
         
-        notesContainer.anchor(top: deleteButton.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0, enableInsets: false)
-        
-        notesTextView.anchor(top: notesContainer.topAnchor, left: notesContainer.leftAnchor, bottom: notesContainer.bottomAnchor, right: notesContainer.rightAnchor, paddingTop: 15, paddingLeft: 15, paddingBottom: 15, paddingRight: 15, width: 0, height: 0, enableInsets: false)
-        
-        
-        }
+    }
     
-   
+    
 }
 

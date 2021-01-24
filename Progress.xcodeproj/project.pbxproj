@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		030F92E125B4875A00260AAD /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F92E025B4875A00260AAD /* Units.swift */; };
+		030F92E425B4952F00260AAD /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F92E325B4952F00260AAD /* LineView.swift */; };
+		034A2D6725BDDDDE00949AFF /* AddViewProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034A2D6625BDDDDE00949AFF /* AddViewProgressCell.swift */; };
+		034A2D6A25BDDDE200949AFF /* AddViewProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034A2D6925BDDDE200949AFF /* AddViewProgressCell.xib */; };
 		034D94BF25781E550096A236 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 034D94BD25781E550096A236 /* Model.xcdatamodeld */; };
 		0381D3892578228C005B42AF /* Item+CoreDataClass.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381D3882578228C005B42AF /* Item+CoreDataClass.swift.swift */; };
 		0381D38D257822CC005B42AF /* Item+CoreDataProperties.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381D38C257822CC005B42AF /* Item+CoreDataProperties.swift .swift */; };
@@ -48,6 +51,9 @@
 
 /* Begin PBXFileReference section */
 		030F92E025B4875A00260AAD /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
+		030F92E325B4952F00260AAD /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		034A2D6625BDDDDE00949AFF /* AddViewProgressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewProgressCell.swift; sourceTree = "<group>"; };
+		034A2D6925BDDDE200949AFF /* AddViewProgressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewProgressCell.xib; sourceTree = "<group>"; };
 		034D94BE25781E550096A236 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		0381D3882578228C005B42AF /* Item+CoreDataClass.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift.swift"; sourceTree = "<group>"; };
 		0381D38C257822CC005B42AF /* Item+CoreDataProperties.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift .swift"; sourceTree = "<group>"; };
@@ -168,8 +174,11 @@
 				03DB722A257B990600682F05 /* AddViewCell.xib */,
 				03DB7232257BB1F500682F05 /* AddViewTitleCell.swift */,
 				03DB7233257BB1F500682F05 /* AddViewTitleCell.xib */,
+				034A2D6625BDDDDE00949AFF /* AddViewProgressCell.swift */,
+				034A2D6925BDDDE200949AFF /* AddViewProgressCell.xib */,
 				03DB723D257BB55A00682F05 /* OptionListTableViewCell.swift */,
 				03DB723E257BB55A00682F05 /* OptionListTableViewCell.xib */,
+				030F92E325B4952F00260AAD /* LineView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03E840DD256985EC00F3850B /* LaunchScreen.storyboard in Resources */,
+				034A2D6A25BDDDE200949AFF /* AddViewProgressCell.xib in Resources */,
 				0395C14225AB28B9009CD17A /* ItemViewCell.xib in Resources */,
 				0395C13C25AB28B1009CD17A /* GalleryViewCell.xib in Resources */,
 				03DB722C257B990600682F05 /* AddViewCell.xib in Resources */,
@@ -279,6 +289,8 @@
 				03AE869A25AB469500B1B36C /* UIButton+Extension.swift in Sources */,
 				03DB7239257BB4BD00682F05 /* OptionListTableViewController.swift in Sources */,
 				0395C1E225AB2E8D009CD17A /* UIColor+Extensions.swift in Sources */,
+				034A2D6725BDDDDE00949AFF /* AddViewProgressCell.swift in Sources */,
+				030F92E425B4952F00260AAD /* LineView.swift in Sources */,
 				030F92E125B4875A00260AAD /* Units.swift in Sources */,
 				03FE2ED6257409970048F93E /* DataSourceObject.swift in Sources */,
 				03B0A388259613D400462A5C /* OptionListModel.swift in Sources */,
