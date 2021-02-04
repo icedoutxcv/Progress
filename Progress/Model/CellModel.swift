@@ -24,11 +24,12 @@ struct OptionCellModel {
 }
 
 struct CellModel {
-    let icon: UIImage
+    var icon: UIImage
     var title: String
     var subtitle: String
     var textFieldFirst: String
     var textFieldSecond: String
+    var text: String
     let type: CellType
     
     enum CellType {
@@ -36,14 +37,16 @@ struct CellModel {
         case colors
         case types
         case textFields
+        case notes
     }
         
-    init(icon: UIImage = UIImage(), title: String = "", subtitle: String = "", type: CellType, isSelected: Bool = false, textFieldFirst: String = "", textFieldSecond: String = "") {
+    init(icon: UIImage = UIImage(), title: String = "", subtitle: String = "", type: CellType, isSelected: Bool = false, textFieldFirst: String = "", textFieldSecond: String = "", text: String = "") {
         self.icon = icon
         self.title = title
         self.subtitle = subtitle
         self.type = type
         self.textFieldFirst = textFieldFirst
         self.textFieldSecond = textFieldSecond
+        self.text = text
     }
 }

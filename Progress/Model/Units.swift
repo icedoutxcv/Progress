@@ -19,5 +19,9 @@ struct Units {
 }
 
 struct ProgressUnit {
-    let name: String
+    var name: String
+}
+
+enum Title {
+    case add, edit
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 
-class GalleryViewController: UIViewController, AddViewControllerDelegate, ItemDetailsViewControllerDelegate, ItemActionDelegate {
+class GalleryViewController: UIViewController, AddViewControllerDelegate, ItemDetailsViewControllerDelegate {
     let dataManager = DataManager()
 
     var tableView = UITableView()
@@ -16,7 +16,9 @@ class GalleryViewController: UIViewController, AddViewControllerDelegate, ItemDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setup()
+        updateData()
     }
     
     func setup() {
@@ -30,13 +32,15 @@ class GalleryViewController: UIViewController, AddViewControllerDelegate, ItemDe
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
-        updateData()
     }
-    
+
     func updateData() {
         model.objects = dataManager.getObjects()
-        tableView.reloadData()
+        
+        UIView.transition(with: tableView, duration: 1.0, options: .transitionCrossDissolve , animations: {
+            self.tableView.reloadData()
+        })
+
     }
     
     func didAddItem() {
@@ -49,14 +53,12 @@ class GalleryViewController: UIViewController, AddViewControllerDelegate, ItemDe
     
     func didSelectItem(item: Item) {
         let navigationController = UINavigationController()
-    
-        let itemDetailsViewController = ItemDetailsViewController(nibName: nil, bundle: nil)
-        itemDetailsViewController.modalTransitionStyle = .coverVertical
-        itemDetailsViewController.model = item
-        itemDetailsViewController.delegate = self
-        itemDetailsViewController.itemActionDelegate = self
         
-        navigationController.addChild(itemDetailsViewController)
+        let addEditViewController = AddEditViewController(type: .old, navTitle: .edit)
+        addEditViewController.item = item
+        addEditViewController.delegate = self
+        
+        navigationController.addChild(addEditViewController)
 
         self.present(navigationController, animated: true)
     }
@@ -64,7 +66,7 @@ class GalleryViewController: UIViewController, AddViewControllerDelegate, ItemDe
     @objc func presentAddViewController() {
         let navigationController = UINavigationController()
     
-        let addViewController = AddViewController(nibName: nil, bundle: nil)
+        let addViewController = AddEditViewController(type: .new, navTitle: .add)
         addViewController.modalTransitionStyle = .coverVertical
         addViewController.delegate = self
         

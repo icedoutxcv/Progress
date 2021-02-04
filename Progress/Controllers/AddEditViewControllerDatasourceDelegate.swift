@@ -8,8 +8,7 @@
 import Foundation
 import UIKit
 
-extension AddViewController: UITableViewDelegate, UITableViewDataSource {
-    
+extension AddEditViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model.models().count
     }
@@ -20,7 +19,8 @@ extension AddViewController: UITableViewDelegate, UITableViewDataSource {
         switch model.type {
         case .title:
             let cell = tableView.dequeueReusableCell(withIdentifier: AddViewTitleCell.identifier, for: indexPath) as! AddViewTitleCell
-            cell.name.delegate = self
+            cell.delegate = self
+            cell.configure(with: model)
             return cell
         case .colors, .types:
             let cell = tableView.dequeueReusableCell(withIdentifier: AddViewCell.identifier, for: indexPath) as! AddViewCell
@@ -28,6 +28,13 @@ extension AddViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .textFields:
             let cell = tableView.dequeueReusableCell(withIdentifier: AddViewProgressCell.identifier, for: indexPath) as! AddViewProgressCell
+            cell.delegate = self
+            cell.configure(with: model)
+            return cell
+        case .notes:
+            let cell = tableView.dequeueReusableCell(withIdentifier: AddViewNotesCell.identifier, for: indexPath) as! AddViewNotesCell
+            cell.configure(model: model)
+            cell.delegate = self
             return cell
         }
     }
@@ -58,15 +65,9 @@ extension AddViewController: UITableViewDelegate, UITableViewDataSource {
     }
         
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 4 {
+            return 160
+        }
         return 60
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        model.title.title = textField.text ?? ""
     }
 }

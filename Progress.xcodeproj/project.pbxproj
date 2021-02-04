@@ -12,26 +12,25 @@
 		034A2D6725BDDDDE00949AFF /* AddViewProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034A2D6625BDDDDE00949AFF /* AddViewProgressCell.swift */; };
 		034A2D6A25BDDDE200949AFF /* AddViewProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034A2D6925BDDDE200949AFF /* AddViewProgressCell.xib */; };
 		034D94BF25781E550096A236 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 034D94BD25781E550096A236 /* Model.xcdatamodeld */; };
-		0381D3892578228C005B42AF /* Item+CoreDataClass.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381D3882578228C005B42AF /* Item+CoreDataClass.swift.swift */; };
-		0381D38D257822CC005B42AF /* Item+CoreDataProperties.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381D38C257822CC005B42AF /* Item+CoreDataProperties.swift .swift */; };
+		0356F50525BF45E200B19C16 /* AddViewNotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356F50325BF45E200B19C16 /* AddViewNotesCell.swift */; };
+		0356F50625BF45E200B19C16 /* AddViewNotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0356F50425BF45E200B19C16 /* AddViewNotesCell.xib */; };
+		0381D3892578228C005B42AF /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381D3882578228C005B42AF /* Item+CoreDataClass.swift */; };
+		0381D38D257822CC005B42AF /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381D38C257822CC005B42AF /* Item+CoreDataProperties.swift */; };
 		0381D394257828A0005B42AF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381D393257828A0005B42AF /* DataManager.swift */; };
 		0395C13C25AB28B1009CD17A /* GalleryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0395C13A25AB28B1009CD17A /* GalleryViewCell.xib */; };
 		0395C13D25AB28B1009CD17A /* GalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395C13B25AB28B1009CD17A /* GalleryViewCell.swift */; };
 		0395C14125AB28B9009CD17A /* ItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395C13F25AB28B9009CD17A /* ItemViewCell.swift */; };
 		0395C14225AB28B9009CD17A /* ItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0395C14025AB28B9009CD17A /* ItemViewCell.xib */; };
 		0395C1D725AB2E64009CD17A /* ItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395C1D625AB2E64009CD17A /* ItemDetailsView.swift */; };
-		0395C1DA25AB2E77009CD17A /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395C1D925AB2E77009CD17A /* ItemDetailsViewController.swift */; };
-		0395C1E025AB2E8D009CD17A /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395C1DD25AB2E8D009CD17A /* UIView+Extensions.swift */; };
 		0395C1E125AB2E8D009CD17A /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395C1DE25AB2E8D009CD17A /* UIViewController+Extension.swift */; };
 		0395C1E225AB2E8D009CD17A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395C1DF25AB2E8D009CD17A /* UIColor+Extensions.swift */; };
-		03AE869A25AB469500B1B36C /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE869925AB469500B1B36C /* UIButton+Extension.swift */; };
-		03B0A37E25960F8000462A5C /* AddViewControllerDatasourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B0A37D25960F8000462A5C /* AddViewControllerDatasourceDelegate.swift */; };
+		03B0A37E25960F8000462A5C /* AddEditViewControllerDatasourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B0A37D25960F8000462A5C /* AddEditViewControllerDatasourceDelegate.swift */; };
 		03B0A3822596130500462A5C /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B0A3812596130500462A5C /* FormModel.swift */; };
 		03B0A3852596136D00462A5C /* OptionListTableViewDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B0A3842596136D00462A5C /* OptionListTableViewDataSourceDelegate.swift */; };
 		03B0A388259613D400462A5C /* OptionListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B0A387259613D400462A5C /* OptionListModel.swift */; };
 		03DB720E257B931A00682F05 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB720D257B931A00682F05 /* ItemType.swift */; };
 		03DB7211257B934C00682F05 /* ItemColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB7210257B934C00682F05 /* ItemColor.swift */; };
-		03DB721A257B968D00682F05 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB7219257B968D00682F05 /* AddViewController.swift */; };
+		03DB721A257B968D00682F05 /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB7219257B968D00682F05 /* AddEditViewController.swift */; };
 		03DB722B257B990600682F05 /* AddViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB7229257B990600682F05 /* AddViewCell.swift */; };
 		03DB722C257B990600682F05 /* AddViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03DB722A257B990600682F05 /* AddViewCell.xib */; };
 		03DB7230257B99E500682F05 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB722F257B99E500682F05 /* CellModel.swift */; };
@@ -55,26 +54,25 @@
 		034A2D6625BDDDDE00949AFF /* AddViewProgressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewProgressCell.swift; sourceTree = "<group>"; };
 		034A2D6925BDDDE200949AFF /* AddViewProgressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewProgressCell.xib; sourceTree = "<group>"; };
 		034D94BE25781E550096A236 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		0381D3882578228C005B42AF /* Item+CoreDataClass.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift.swift"; sourceTree = "<group>"; };
-		0381D38C257822CC005B42AF /* Item+CoreDataProperties.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift .swift"; sourceTree = "<group>"; };
+		0356F50325BF45E200B19C16 /* AddViewNotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewNotesCell.swift; sourceTree = "<group>"; };
+		0356F50425BF45E200B19C16 /* AddViewNotesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewNotesCell.xib; sourceTree = "<group>"; };
+		0381D3882578228C005B42AF /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0381D38C257822CC005B42AF /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0381D393257828A0005B42AF /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		0395C13A25AB28B1009CD17A /* GalleryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryViewCell.xib; sourceTree = "<group>"; };
 		0395C13B25AB28B1009CD17A /* GalleryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewCell.swift; sourceTree = "<group>"; };
 		0395C13F25AB28B9009CD17A /* ItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewCell.swift; sourceTree = "<group>"; };
 		0395C14025AB28B9009CD17A /* ItemViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemViewCell.xib; sourceTree = "<group>"; };
 		0395C1D625AB2E64009CD17A /* ItemDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemDetailsView.swift; path = Progress/Views/ItemDetailsView.swift; sourceTree = SOURCE_ROOT; };
-		0395C1D925AB2E77009CD17A /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
-		0395C1DD25AB2E8D009CD17A /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		0395C1DE25AB2E8D009CD17A /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		0395C1DF25AB2E8D009CD17A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		03AE869925AB469500B1B36C /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
-		03B0A37D25960F8000462A5C /* AddViewControllerDatasourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewControllerDatasourceDelegate.swift; sourceTree = "<group>"; };
+		03B0A37D25960F8000462A5C /* AddEditViewControllerDatasourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewControllerDatasourceDelegate.swift; sourceTree = "<group>"; };
 		03B0A3812596130500462A5C /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
 		03B0A3842596136D00462A5C /* OptionListTableViewDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionListTableViewDataSourceDelegate.swift; sourceTree = "<group>"; };
 		03B0A387259613D400462A5C /* OptionListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionListModel.swift; sourceTree = "<group>"; };
 		03DB720D257B931A00682F05 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		03DB7210257B934C00682F05 /* ItemColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemColor.swift; sourceTree = "<group>"; };
-		03DB7219257B968D00682F05 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		03DB7219257B968D00682F05 /* AddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
 		03DB7229257B990600682F05 /* AddViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewCell.swift; sourceTree = "<group>"; };
 		03DB722A257B990600682F05 /* AddViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewCell.xib; sourceTree = "<group>"; };
 		03DB722F257B99E500682F05 /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
@@ -109,9 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				0395C1DF25AB2E8D009CD17A /* UIColor+Extensions.swift */,
-				0395C1DD25AB2E8D009CD17A /* UIView+Extensions.swift */,
 				0395C1DE25AB2E8D009CD17A /* UIViewController+Extension.swift */,
-				03AE869925AB469500B1B36C /* UIButton+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -153,9 +149,8 @@
 			children = (
 				03E840D4256985EA00F3850B /* GalleryViewController.swift */,
 				03E840E825698B9600F3850B /* GalleryViewDatasourceDelegate.swift */,
-				0395C1D925AB2E77009CD17A /* ItemDetailsViewController.swift */,
-				03DB7219257B968D00682F05 /* AddViewController.swift */,
-				03B0A37D25960F8000462A5C /* AddViewControllerDatasourceDelegate.swift */,
+				03DB7219257B968D00682F05 /* AddEditViewController.swift */,
+				03B0A37D25960F8000462A5C /* AddEditViewControllerDatasourceDelegate.swift */,
 				03DB7238257BB4BD00682F05 /* OptionListTableViewController.swift */,
 				03B0A3842596136D00462A5C /* OptionListTableViewDataSourceDelegate.swift */,
 			);
@@ -176,6 +171,8 @@
 				03DB7233257BB1F500682F05 /* AddViewTitleCell.xib */,
 				034A2D6625BDDDDE00949AFF /* AddViewProgressCell.swift */,
 				034A2D6925BDDDE200949AFF /* AddViewProgressCell.xib */,
+				0356F50325BF45E200B19C16 /* AddViewNotesCell.swift */,
+				0356F50425BF45E200B19C16 /* AddViewNotesCell.xib */,
 				03DB723D257BB55A00682F05 /* OptionListTableViewCell.swift */,
 				03DB723E257BB55A00682F05 /* OptionListTableViewCell.xib */,
 				030F92E325B4952F00260AAD /* LineView.swift */,
@@ -188,8 +185,8 @@
 			children = (
 				0381D393257828A0005B42AF /* DataManager.swift */,
 				034D94BD25781E550096A236 /* Model.xcdatamodeld */,
-				0381D3882578228C005B42AF /* Item+CoreDataClass.swift.swift */,
-				0381D38C257822CC005B42AF /* Item+CoreDataProperties.swift .swift */,
+				0381D3882578228C005B42AF /* Item+CoreDataClass.swift */,
+				0381D38C257822CC005B42AF /* Item+CoreDataProperties.swift */,
 				03FE2ED5257409970048F93E /* DataSourceObject.swift */,
 				03DB720D257B931A00682F05 /* ItemType.swift */,
 				03DB7210257B934C00682F05 /* ItemColor.swift */,
@@ -264,6 +261,7 @@
 				0395C13C25AB28B1009CD17A /* GalleryViewCell.xib in Resources */,
 				03DB722C257B990600682F05 /* AddViewCell.xib in Resources */,
 				03DB7235257BB1F500682F05 /* AddViewTitleCell.xib in Resources */,
+				0356F50625BF45E200B19C16 /* AddViewNotesCell.xib in Resources */,
 				03E840DA256985EC00F3850B /* Assets.xcassets in Resources */,
 				03DB7240257BB55A00682F05 /* OptionListTableViewCell.xib in Resources */,
 			);
@@ -280,13 +278,13 @@
 				0395C1D725AB2E64009CD17A /* ItemDetailsView.swift in Sources */,
 				03DB723F257BB55A00682F05 /* OptionListTableViewCell.swift in Sources */,
 				03DB7230257B99E500682F05 /* CellModel.swift in Sources */,
-				0381D38D257822CC005B42AF /* Item+CoreDataProperties.swift .swift in Sources */,
+				0381D38D257822CC005B42AF /* Item+CoreDataProperties.swift in Sources */,
 				03DB720E257B931A00682F05 /* ItemType.swift in Sources */,
 				03DB7234257BB1F500682F05 /* AddViewTitleCell.swift in Sources */,
+				0356F50525BF45E200B19C16 /* AddViewNotesCell.swift in Sources */,
 				0395C14125AB28B9009CD17A /* ItemViewCell.swift in Sources */,
-				0381D3892578228C005B42AF /* Item+CoreDataClass.swift.swift in Sources */,
+				0381D3892578228C005B42AF /* Item+CoreDataClass.swift in Sources */,
 				03E840D5256985EA00F3850B /* GalleryViewController.swift in Sources */,
-				03AE869A25AB469500B1B36C /* UIButton+Extension.swift in Sources */,
 				03DB7239257BB4BD00682F05 /* OptionListTableViewController.swift in Sources */,
 				0395C1E225AB2E8D009CD17A /* UIColor+Extensions.swift in Sources */,
 				034A2D6725BDDDDE00949AFF /* AddViewProgressCell.swift in Sources */,
@@ -299,15 +297,13 @@
 				034D94BF25781E550096A236 /* Model.xcdatamodeld in Sources */,
 				03B0A3822596130500462A5C /* FormModel.swift in Sources */,
 				03DB7211257B934C00682F05 /* ItemColor.swift in Sources */,
-				03DB721A257B968D00682F05 /* AddViewController.swift in Sources */,
-				0395C1E025AB2E8D009CD17A /* UIView+Extensions.swift in Sources */,
+				03DB721A257B968D00682F05 /* AddEditViewController.swift in Sources */,
 				03E840D1256985EA00F3850B /* AppDelegate.swift in Sources */,
 				03E840D3256985EA00F3850B /* SceneDelegate.swift in Sources */,
-				03B0A37E25960F8000462A5C /* AddViewControllerDatasourceDelegate.swift in Sources */,
+				03B0A37E25960F8000462A5C /* AddEditViewControllerDatasourceDelegate.swift in Sources */,
 				0395C13D25AB28B1009CD17A /* GalleryViewCell.swift in Sources */,
 				0381D394257828A0005B42AF /* DataManager.swift in Sources */,
 				03E840E925698B9600F3850B /* GalleryViewDatasourceDelegate.swift in Sources */,
-				0395C1DA25AB2E77009CD17A /* ItemDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

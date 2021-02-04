@@ -2,13 +2,13 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Item" representedClassName="Item" syncable="YES">
         <attribute name="color" attributeType="String"/>
-        <attribute name="end" optional="YES" attributeType="String"/>
+        <attribute name="end" attributeType="String"/>
         <attribute name="id" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
-        <attribute name="notes" optional="YES" attributeType="String"/>
-        <attribute name="start" optional="YES" attributeType="String"/>
+        <attribute name="notes" attributeType="String"/>
+        <attribute name="start" attributeType="String"/>
         <attribute name="type" attributeType="String"/>
-        <attribute name="unit" optional="YES" attributeType="String"/>
+        <attribute name="unit" attributeType="String"/>
     </entity>
     <elements>
         <element name="Item" positionX="-54" positionY="-9" width="128" height="149"/>

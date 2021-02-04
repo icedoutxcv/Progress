@@ -17,10 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
                 if !launchedBefore {
                     let dataManager = DataManager()
-                    dataManager.addItem(name: "The Man Who Fell to Earth 1976", type: "movie", color: ItemColor.stringColor(from: .green))
-                    dataManager.addItem(name: "Blow 2001", type: "Movie", color: ItemColor.stringColor(from: .orange))
-                    dataManager.addItem(name: "Mały Książę - Antoine de Saint-Exupéry", type: "book", color: ItemColor.stringColor(from: .indigo))
-                    dataManager.addItem(name: "Rok 1984 - George Orwell", type: "book", color: ItemColor.stringColor(from: .red))
+//                    dataManager.addItem(name: "The Man Who Fell to Earth 1976", type: "movie", color: ItemColor.stringColor(from: .green))
+//                    dataManager.addItem(name: "Blow 2001", type: "Movie", color: ItemColor.stringColor(from: .orange))
+//                    dataManager.addItem(name: "Mały Książę - Antoine de Saint-Exupéry", type: "book", color: ItemColor.stringColor(from: .indigo))
+//                    dataManager.addItem(name: "Rok 1984 - George Orwell", type: "book", color: ItemColor.stringColor(from: .red))
                         UserDefaults.standard.set(true, forKey: "launchedBefore")
 
                 }

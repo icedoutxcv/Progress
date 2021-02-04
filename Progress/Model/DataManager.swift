@@ -24,11 +24,14 @@ class DataManager {
         return []
     }
     
-    func edit(item: Item, notes: String, start: String, end: String, unit: String) {
-        item.notes = notes
-        item.start = start
-        item.end = end
-        item.unit = unit
+    func editItem(item: Item, name: String?, type: String?, color: String?, start: String?, end: String?,  unit: String?, notes: String?) {
+        item.name = name ?? item.name
+        item.type = type ?? item.type
+        item.color = color ?? item.color
+        item.start = start ?? item.start
+        item.end = end ?? item.end
+        item.unit = unit ?? item.unit
+        item.notes = notes ?? item.notes
         
         do {
             try self.context.save()
@@ -39,12 +42,26 @@ class DataManager {
         saveContext()
     }
     
-    func addItem(name: String, type: String, color: String) {
+    func add(item: Item) {
+        do {
+            try self.context.save()
+        } catch {
+            print(error)
+        }
+        
+        saveContext()
+    }
+    
+    func addItem(name: String, type: String, color: String, start: String, end: String, unit: String, notes: String) {
         let item = Item(context: context)
         item.id = UUID().uuidString
         item.name = name
         item.type = type
         item.color = color
+        item.start = start
+        item.end = end
+        item.unit = unit
+        item.notes = notes
         
         do {
             try self.context.save()
