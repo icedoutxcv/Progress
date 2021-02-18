@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
+enum Color: String {
+    case blue, green, indigo, orange, pink, purple, red, teal, yellow
+}
+
 class ItemColor {
-    enum Color: String {
-        case blue, green, indigo, orange, pink, purple, red, teal, yellow
-    }
-    
     static func stringColor(from color: Color) -> String {
         switch color {
         case .blue: return "blue"

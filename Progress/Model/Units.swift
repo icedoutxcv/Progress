@@ -7,19 +7,31 @@
 
 import Foundation
 
-struct Units {
-   static let items = [
-        ProgressUnit(name: "minutes"),
-        ProgressUnit(name: "pages"),
-        ProgressUnit(name: "levels"),
-        ProgressUnit(name: "episodes"),
-        ProgressUnit(name: "seasons"),
-        ProgressUnit(name: "other unit")
+class Units {
+    static let minutes = ProgressUnit.minutes
+    static let pages = ProgressUnit.pages
+    static let levels = ProgressUnit.levels
+    static let episodes = ProgressUnit.episodes
+    static let seasons = ProgressUnit.seasons
+    static let other = ProgressUnit.other
+    
+    static let items = [
+        ProgressUnit.minutes,
+        ProgressUnit.pages,
+        ProgressUnit.levels,
+        ProgressUnit.episodes,
+        ProgressUnit.seasons,
+        ProgressUnit.other
     ]
 }
 
-struct ProgressUnit {
-    var name: String
+enum ProgressUnit: String {
+    case minutes = "minutes"
+    case pages = "pages"
+    case levels = "levels"
+    case episodes = "episodes"
+    case seasons = "seasons"
+    case other = "other"
 }
 
 enum Title {

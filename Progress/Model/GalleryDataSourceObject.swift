@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DataSourceObject {
+class GalleryDataSourceObject {
     var sectionName: ItemType
     var items: [Item] = []
     

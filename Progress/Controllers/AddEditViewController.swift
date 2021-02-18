@@ -8,21 +8,22 @@
 import Foundation
 import UIKit
 
-protocol AddViewControllerDelegate {
+protocol AddEditViewControllerDelegate {
     func didAddItem()
 }
 
-class AddEditViewController: UIViewController, AddViewControllerDelegate, TitleCellDelegate, OptionListDelegate, ProgressCellDelegate, NotesCellDelegate  {
+class AddEditViewController: UIViewController {
 
+    // MARK: Data
     let dataManager = DataManager()
-
-    var tableView = UITableView()
-    
     var model = FormModel()
     lazy var item = Item(context: dataManager.context)
-    
     var type: FormType
-    var delegate: AddViewControllerDelegate!
+
+    // MARK: UI
+    var tableView = UITableView()
+    
+    var delegate: AddEditViewControllerDelegate!
     var navTitle: Title
     
     init(type: FormType, navTitle: Title) {
@@ -39,12 +40,12 @@ class AddEditViewController: UIViewController, AddViewControllerDelegate, TitleC
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setup()
-        configure()
+        setupViewController()
+        setupTableView()
+        configureIfNeeded()
     }
     
-    func setup() {
-        
+    func setupViewController() {
         switch navTitle {
             case .add:
                 navigationItem.title = "Add"
@@ -65,7 +66,9 @@ class AddEditViewController: UIViewController, AddViewControllerDelegate, TitleC
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(save))
-                
+    }
+    
+    func setupTableView() {
         tableView = UITableView(frame: view.frame, style: .plain)
         tableView.register(AddViewCell.nib(), forCellReuseIdentifier: AddViewCell.identifier)
         tableView.register(AddViewTitleCell.nib(), forCellReuseIdentifier: AddViewTitleCell.identifier)
@@ -78,8 +81,7 @@ class AddEditViewController: UIViewController, AddViewControllerDelegate, TitleC
         self.tableView.dataSource = self
     }
     
-    
-    func configure() {
+    func configureIfNeeded() {
         if type == .old {
             model.title.title = item.name
             model.colors.subtitle = item.color
@@ -113,11 +115,28 @@ class AddEditViewController: UIViewController, AddViewControllerDelegate, TitleC
         self.view.endEditing(true)
     }
     
+    // MARK: Show options after unit in ProgressCellDelegate is tapped
+    @objc func showOptions() {
+        let ac = UIAlertController(title: "Units", message: "", preferredStyle: .alert)
+        
+        for unit in Units.items {
+            ac.addAction(UIAlertAction(title: unit.rawValue, style: .default, handler: { (ac) in
+                self.model.progress.subtitle = unit.rawValue
+                self.tableView.reloadData()
+            }))
+        }
+        present(ac, animated: true)
+    }
+}
+
+extension AddEditViewController: AddEditViewControllerDelegate, TitleCellDelegate, OptionListDelegate, ProgressCellDelegate, NotesCellDelegate {
+    
+    // MARK: AddEditViewControllerDelegate method
     func didAddItem() {
         delegate.didAddItem()
     }
     
-            
+    // MARK: OptionListDelegate method
     func didSelectOption(type: OptionListType, option: OptionCellModel, row: Int) {
         switch type {
         case .colors:
@@ -129,16 +148,17 @@ class AddEditViewController: UIViewController, AddViewControllerDelegate, TitleC
         tableView.reloadData()
     }
      
+    // MARK: TitleCellDelegate methods
     func didEndEditingTitle(text: String) {
         model.title.title = text
     }
     
-    
+    // MARK: NotesCellDelegate methods
     func didEndedWritingNote(text: String) {
         model.notes.text = text
     }
     
-    
+    // MARK: ProgressCellDelegate methods
     func didTappedUnitButton() {
         self.showOptions()
     }
@@ -149,18 +169,6 @@ class AddEditViewController: UIViewController, AddViewControllerDelegate, TitleC
     
     func didEnterEndValue(text: String) {
         model.progress.textFieldSecond = text
-    }
-    
-    @objc func showOptions() {
-        let ac = UIAlertController(title: "Units", message: "", preferredStyle: .alert)
-        
-        for unit in Units.items {
-            ac.addAction(UIAlertAction(title: unit.name, style: .default, handler: { (ac) in
-                self.model.progress.subtitle = unit.name
-                self.tableView.reloadData()
-            }))
-        }
-        present(ac, animated: true)
     }
 }
 

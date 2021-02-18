@@ -9,6 +9,7 @@ import UIKit
 
 protocol ItemDetailsViewControllerDelegate {
     func didSelectItem(item: Item)
+    func didLongPressItem(item: Item)
 }
 
 class GalleryViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
@@ -30,9 +31,30 @@ class GalleryViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionVi
         collectionView.dataSource = self
         collectionView.contentInset = UIEdgeInsets.init(top: 0, left: 15, bottom: 0, right: 15)
         
+        let longPressGR = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(longPressGR:)))
+            longPressGR.minimumPressDuration = 0.5
+            longPressGR.delaysTouchesBegan = true
+            self.collectionView.addGestureRecognizer(longPressGR)
+        longPressGR.delegate = self
+        
         layoutSubviews()
     }
-
+    
+    @objc func handleLongPress(longPressGR: UILongPressGestureRecognizer) {
+        if longPressGR.state != .began {
+            return
+        }
+        
+        let point = longPressGR.location(in: self.collectionView)
+        let indexPath = self.collectionView.indexPathForItem(at: point)
+        
+        if let indexPath = indexPath {
+            delegate.didLongPressItem(item: models[indexPath.row])
+        } else {
+            print("Could not find index path")
+        }
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         

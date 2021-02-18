@@ -12,6 +12,8 @@ protocol OptionListDelegate {
 }
 
 class OptionListTableViewController: UITableViewController {
+    
+    // MARK: Data
     var model = OptionListModel()
     var type: OptionListType
     var selectedOption: String?
@@ -39,10 +41,10 @@ class OptionListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       setup()
+        setupTableView()
     }
     
-    func setup() {
+    func setupTableView() {
         tableView.register(OptionListTableViewCell.nib(), forCellReuseIdentifier: OptionListTableViewCell.identifier)
         tableView.allowsMultipleSelection = false
     }

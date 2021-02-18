@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public extension UIColor {
-    var codedString: String?{
+    var codedString: String? {
         do {
             let data = try NSKeyedArchiver.archivedData(withRootObject: self, requiringSecureCoding: true)
             return data.base64EncodedString()
@@ -20,8 +20,7 @@ public extension UIColor {
         }
     }
 
-
-    static func color(withCodedString string: String) -> UIColor?{
+    static func color(withCodedString string: String) -> UIColor? {
         guard let data = Data(base64Encoded: string) else{
             return nil
         }

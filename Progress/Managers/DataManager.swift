@@ -39,17 +39,6 @@ class DataManager {
             print(error)
         }
         
-        saveContext()
-    }
-    
-    func add(item: Item) {
-        do {
-            try self.context.save()
-        } catch {
-            print(error)
-        }
-        
-        saveContext()
     }
     
     func addItem(name: String, type: String, color: String, start: String, end: String, unit: String, notes: String) {
@@ -69,13 +58,13 @@ class DataManager {
             print(error)
         }
         
-        saveContext()
+        
     }
     
     func deleteObject(item: Item) {
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         fetchRequest.predicate = NSPredicate.init(format: "id == %@", item.id)
-
+        
         do {
             let objects = try context.fetch(fetchRequest)
             for object in objects {
@@ -86,28 +75,25 @@ class DataManager {
             print(error)
         }
     }
-    
-    func saveContext() {
-        do {
-            try self.context.save()
-        } catch {
-            print(error)
-        }
-    }
-    
+
     func deleteRecords() {
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
-
+        
         if let result = try? context.fetch(fetchRequest) {
             for object in result {
                 context.delete(object)
             }
         }
-        saveContext()
+        
+        do {
+            try self.context.save()
+        } catch {
+            print(error)
+        }
         
     }
     
-    func getObjects() -> [DataSourceObject] {
+    func getObjects() -> [GalleryDataSourceObject] {
         let items = fetchData()
         let dataSourceObjects = createDataSourceObjects(from: items)
         return dataSourceObjects
@@ -115,9 +101,9 @@ class DataManager {
 }
 
 extension DataManager {
-    func createDataSourceObjects(from items: [Item]) -> [DataSourceObject] {
-        var objects = [DataSourceObject]()
-
+    func createDataSourceObjects(from items: [Item]) -> [GalleryDataSourceObject] {
+        var objects = [GalleryDataSourceObject]()
+        
         for item in items {
             let itemType = ItemType.getItemType(from: item.type)
             
@@ -126,7 +112,7 @@ extension DataManager {
             })
             
             if !objectWithCategoryExist {
-                let newObject = DataSourceObject(sectionName: itemType, items: [item])
+                let newObject = GalleryDataSourceObject(sectionName: itemType, items: [item])
                 objects.append(newObject)
             } else {
                 for object in objects {

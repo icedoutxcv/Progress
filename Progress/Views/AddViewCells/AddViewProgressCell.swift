@@ -13,7 +13,7 @@ protocol ProgressCellDelegate {
     func didEnterEndValue(text: String)
 }
 
-class AddViewProgressCell: UITableViewCell, AddViewControllerDelegate, ProgressCellDelegate, UITextFieldDelegate {
+class AddViewProgressCell: UITableViewCell, AddEditViewControllerDelegate, ProgressCellDelegate, UITextFieldDelegate {
     func didAddItem() {}
     
     var delegate: ProgressCellDelegate!

@@ -13,20 +13,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // MARK: - Add template data
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
-                if !launchedBefore {
-                    let dataManager = DataManager()
-//                    dataManager.addItem(name: "The Man Who Fell to Earth 1976", type: "movie", color: ItemColor.stringColor(from: .green))
-//                    dataManager.addItem(name: "Blow 2001", type: "Movie", color: ItemColor.stringColor(from: .orange))
-//                    dataManager.addItem(name: "Mały Książę - Antoine de Saint-Exupéry", type: "book", color: ItemColor.stringColor(from: .indigo))
-//                    dataManager.addItem(name: "Rok 1984 - George Orwell", type: "book", color: ItemColor.stringColor(from: .red))
-                        UserDefaults.standard.set(true, forKey: "launchedBefore")
-
-                }
-    
+        if !launchedBefore {
+            // MARK: Create test data
+            createData()
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+        }
+        
         return true
     }
+    
+    func createData() {
+        let dataManager = DataManager()
+        dataManager.addItem(name: "Rok 1984 - George Orwell", type: ItemType.book.rawValue, color: ItemColor.stringColor(from: .red), start: "", end: "", unit: ProgressUnit.episodes.rawValue, notes: "")
+        dataManager.addItem(name: "Mały Książę - Antoine de Saint-Exupéry", type: ItemType.book.rawValue, color: ItemColor.stringColor(from: .yellow), start: "", end: "", unit: ProgressUnit.pages.rawValue, notes: "")
+        dataManager.addItem(name: "Blow 2001", type: ItemType.movie.rawValue, color: ItemColor.stringColor(from: .yellow), start: "", end: "", unit: ProgressUnit.pages.rawValue, notes: "")
+    }
+
     
     // MARK: UISceneSession Lifecycle
     

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		030F92E125B4875A00260AAD /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F92E025B4875A00260AAD /* Units.swift */; };
-		030F92E425B4952F00260AAD /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F92E325B4952F00260AAD /* LineView.swift */; };
 		034A2D6725BDDDDE00949AFF /* AddViewProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034A2D6625BDDDDE00949AFF /* AddViewProgressCell.swift */; };
 		034A2D6A25BDDDE200949AFF /* AddViewProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034A2D6925BDDDE200949AFF /* AddViewProgressCell.xib */; };
 		034D94BF25781E550096A236 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 034D94BD25781E550096A236 /* Model.xcdatamodeld */; };
@@ -21,7 +20,6 @@
 		0395C13D25AB28B1009CD17A /* GalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395C13B25AB28B1009CD17A /* GalleryViewCell.swift */; };
 		0395C14125AB28B9009CD17A /* ItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395C13F25AB28B9009CD17A /* ItemViewCell.swift */; };
 		0395C14225AB28B9009CD17A /* ItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0395C14025AB28B9009CD17A /* ItemViewCell.xib */; };
-		0395C1D725AB2E64009CD17A /* ItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395C1D625AB2E64009CD17A /* ItemDetailsView.swift */; };
 		0395C1E125AB2E8D009CD17A /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395C1DE25AB2E8D009CD17A /* UIViewController+Extension.swift */; };
 		0395C1E225AB2E8D009CD17A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395C1DF25AB2E8D009CD17A /* UIColor+Extensions.swift */; };
 		03B0A37E25960F8000462A5C /* AddEditViewControllerDatasourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B0A37D25960F8000462A5C /* AddEditViewControllerDatasourceDelegate.swift */; };
@@ -45,12 +43,11 @@
 		03E840DA256985EC00F3850B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E840D9256985EC00F3850B /* Assets.xcassets */; };
 		03E840DD256985EC00F3850B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E840DB256985EC00F3850B /* LaunchScreen.storyboard */; };
 		03E840E925698B9600F3850B /* GalleryViewDatasourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E840E825698B9600F3850B /* GalleryViewDatasourceDelegate.swift */; };
-		03FE2ED6257409970048F93E /* DataSourceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FE2ED5257409970048F93E /* DataSourceObject.swift */; };
+		03FE2ED6257409970048F93E /* GalleryDataSourceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FE2ED5257409970048F93E /* GalleryDataSourceObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		030F92E025B4875A00260AAD /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
-		030F92E325B4952F00260AAD /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		034A2D6625BDDDDE00949AFF /* AddViewProgressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewProgressCell.swift; sourceTree = "<group>"; };
 		034A2D6925BDDDE200949AFF /* AddViewProgressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewProgressCell.xib; sourceTree = "<group>"; };
 		034D94BE25781E550096A236 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -63,7 +60,6 @@
 		0395C13B25AB28B1009CD17A /* GalleryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewCell.swift; sourceTree = "<group>"; };
 		0395C13F25AB28B9009CD17A /* ItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewCell.swift; sourceTree = "<group>"; };
 		0395C14025AB28B9009CD17A /* ItemViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemViewCell.xib; sourceTree = "<group>"; };
-		0395C1D625AB2E64009CD17A /* ItemDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemDetailsView.swift; path = Progress/Views/ItemDetailsView.swift; sourceTree = SOURCE_ROOT; };
 		0395C1DE25AB2E8D009CD17A /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		0395C1DF25AB2E8D009CD17A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		03B0A37D25960F8000462A5C /* AddEditViewControllerDatasourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewControllerDatasourceDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +85,7 @@
 		03E840DC256985EC00F3850B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03E840DE256985EC00F3850B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03E840E825698B9600F3850B /* GalleryViewDatasourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewDatasourceDelegate.swift; sourceTree = "<group>"; };
-		03FE2ED5257409970048F93E /* DataSourceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceObject.swift; sourceTree = "<group>"; };
+		03FE2ED5257409970048F93E /* GalleryDataSourceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDataSourceObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +99,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		033C357D25DEC26E006A5AAB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0381D393257828A0005B42AF /* DataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		033C357E25DEC27E006A5AAB /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				03E840D0256985EA00F3850B /* AppDelegate.swift */,
+				03E840D2256985EA00F3850B /* SceneDelegate.swift */,
+				03E840D9256985EC00F3850B /* Assets.xcassets */,
+				03E840DB256985EC00F3850B /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		033C358025DEC2AB006A5AAB /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				0381D38C257822CC005B42AF /* Item+CoreDataProperties.swift */,
+				0381D3882578228C005B42AF /* Item+CoreDataClass.swift */,
+				03DB720D257B931A00682F05 /* ItemType.swift */,
+				03DB7210257B934C00682F05 /* ItemColor.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		033C358425DEC2F1006A5AAB /* ItemViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0395C13F25AB28B9009CD17A /* ItemViewCell.swift */,
+				0395C14025AB28B9009CD17A /* ItemViewCell.xib */,
+			);
+			path = ItemViewCell;
+			sourceTree = "<group>";
+		};
+		033C358625DEC303006A5AAB /* GalleryCell */ = {
+			isa = PBXGroup;
+			children = (
+				0395C13B25AB28B1009CD17A /* GalleryViewCell.swift */,
+				0395C13A25AB28B1009CD17A /* GalleryViewCell.xib */,
+			);
+			path = GalleryCell;
+			sourceTree = "<group>";
+		};
+		033C358825DEC31E006A5AAB /* AddViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				03DB7229257B990600682F05 /* AddViewCell.swift */,
+				03DB722A257B990600682F05 /* AddViewCell.xib */,
+				03DB7232257BB1F500682F05 /* AddViewTitleCell.swift */,
+				03DB7233257BB1F500682F05 /* AddViewTitleCell.xib */,
+				034A2D6625BDDDDE00949AFF /* AddViewProgressCell.swift */,
+				034A2D6925BDDDE200949AFF /* AddViewProgressCell.xib */,
+				0356F50325BF45E200B19C16 /* AddViewNotesCell.swift */,
+				0356F50425BF45E200B19C16 /* AddViewNotesCell.xib */,
+			);
+			path = AddViewCells;
+			sourceTree = "<group>";
+		};
+		033C358B25DEC341006A5AAB /* OptionListCell */ = {
+			isa = PBXGroup;
+			children = (
+				03DB723D257BB55A00682F05 /* OptionListTableViewCell.swift */,
+				03DB723E257BB55A00682F05 /* OptionListTableViewCell.xib */,
+			);
+			path = OptionListCell;
+			sourceTree = "<group>";
+		};
 		03B0A38A259618BD00462A5C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,15 +199,13 @@
 		03E840CF256985EA00F3850B /* Progress */ = {
 			isa = PBXGroup;
 			children = (
-				03E840D0256985EA00F3850B /* AppDelegate.swift */,
-				03E840D2256985EA00F3850B /* SceneDelegate.swift */,
+				03E840DE256985EC00F3850B /* Info.plist */,
+				033C357D25DEC26E006A5AAB /* Managers */,
 				03FE2ED4257409790048F93E /* Model */,
+				03E840F12569937D00F3850B /* Views */,
 				03E840E725698B5D00F3850B /* Controllers */,
 				03B0A38A259618BD00462A5C /* Extensions */,
-				03E840F12569937D00F3850B /* Views */,
-				03E840D9256985EC00F3850B /* Assets.xcassets */,
-				03E840DB256985EC00F3850B /* LaunchScreen.storyboard */,
-				03E840DE256985EC00F3850B /* Info.plist */,
+				033C357E25DEC27E006A5AAB /* Support */,
 			);
 			path = Progress;
 			sourceTree = "<group>";
@@ -160,22 +226,10 @@
 		03E840F12569937D00F3850B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0395C1D625AB2E64009CD17A /* ItemDetailsView.swift */,
-				0395C13F25AB28B9009CD17A /* ItemViewCell.swift */,
-				0395C14025AB28B9009CD17A /* ItemViewCell.xib */,
-				0395C13B25AB28B1009CD17A /* GalleryViewCell.swift */,
-				0395C13A25AB28B1009CD17A /* GalleryViewCell.xib */,
-				03DB7229257B990600682F05 /* AddViewCell.swift */,
-				03DB722A257B990600682F05 /* AddViewCell.xib */,
-				03DB7232257BB1F500682F05 /* AddViewTitleCell.swift */,
-				03DB7233257BB1F500682F05 /* AddViewTitleCell.xib */,
-				034A2D6625BDDDDE00949AFF /* AddViewProgressCell.swift */,
-				034A2D6925BDDDE200949AFF /* AddViewProgressCell.xib */,
-				0356F50325BF45E200B19C16 /* AddViewNotesCell.swift */,
-				0356F50425BF45E200B19C16 /* AddViewNotesCell.xib */,
-				03DB723D257BB55A00682F05 /* OptionListTableViewCell.swift */,
-				03DB723E257BB55A00682F05 /* OptionListTableViewCell.xib */,
-				030F92E325B4952F00260AAD /* LineView.swift */,
+				033C358425DEC2F1006A5AAB /* ItemViewCell */,
+				033C358625DEC303006A5AAB /* GalleryCell */,
+				033C358825DEC31E006A5AAB /* AddViewCells */,
+				033C358B25DEC341006A5AAB /* OptionListCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,15 +237,11 @@
 		03FE2ED4257409790048F93E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0381D393257828A0005B42AF /* DataManager.swift */,
 				034D94BD25781E550096A236 /* Model.xcdatamodeld */,
-				0381D3882578228C005B42AF /* Item+CoreDataClass.swift */,
-				0381D38C257822CC005B42AF /* Item+CoreDataProperties.swift */,
-				03FE2ED5257409970048F93E /* DataSourceObject.swift */,
-				03DB720D257B931A00682F05 /* ItemType.swift */,
-				03DB7210257B934C00682F05 /* ItemColor.swift */,
-				03DB722F257B99E500682F05 /* CellModel.swift */,
+				033C358025DEC2AB006A5AAB /* Item */,
+				03FE2ED5257409970048F93E /* GalleryDataSourceObject.swift */,
 				03B0A3812596130500462A5C /* FormModel.swift */,
+				03DB722F257B99E500682F05 /* CellModel.swift */,
 				03B0A387259613D400462A5C /* OptionListModel.swift */,
 				030F92E025B4875A00260AAD /* Units.swift */,
 			);
@@ -275,7 +325,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0395C1E125AB2E8D009CD17A /* UIViewController+Extension.swift in Sources */,
-				0395C1D725AB2E64009CD17A /* ItemDetailsView.swift in Sources */,
 				03DB723F257BB55A00682F05 /* OptionListTableViewCell.swift in Sources */,
 				03DB7230257B99E500682F05 /* CellModel.swift in Sources */,
 				0381D38D257822CC005B42AF /* Item+CoreDataProperties.swift in Sources */,
@@ -288,9 +337,8 @@
 				03DB7239257BB4BD00682F05 /* OptionListTableViewController.swift in Sources */,
 				0395C1E225AB2E8D009CD17A /* UIColor+Extensions.swift in Sources */,
 				034A2D6725BDDDDE00949AFF /* AddViewProgressCell.swift in Sources */,
-				030F92E425B4952F00260AAD /* LineView.swift in Sources */,
 				030F92E125B4875A00260AAD /* Units.swift in Sources */,
-				03FE2ED6257409970048F93E /* DataSourceObject.swift in Sources */,
+				03FE2ED6257409970048F93E /* GalleryDataSourceObject.swift in Sources */,
 				03B0A388259613D400462A5C /* OptionListModel.swift in Sources */,
 				03DB722B257B990600682F05 /* AddViewCell.swift in Sources */,
 				03B0A3852596136D00462A5C /* OptionListTableViewDataSourceDelegate.swift in Sources */,

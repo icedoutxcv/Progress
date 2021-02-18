@@ -36,7 +36,7 @@ extension GalleryViewController:  UITableViewDataSource, UITableViewDelegate {
         headerView.backgroundColor = .systemBackground
         
         let label = UILabel()
-        label.frame = CGRect.init(x: 15, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
+        label.frame = CGRect.init(x: 15, y: 10, width: headerView.frame.width-10, height: headerView.frame.height-10)
         label.font = UIFont(name: "Avenir-Book", size: 18)
         label.text = model.objects[section].sectionName.categoryName()
         

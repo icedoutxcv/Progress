@@ -10,11 +10,11 @@ import UIKit
 
 extension AddEditViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.models().count
+        return model.objects().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = self.model.models()[indexPath.row]
+        let model = self.model.objects()[indexPath.row]
         
         switch model.type {
         case .title:
@@ -42,7 +42,7 @@ extension AddEditViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        let model = self.model.models()[indexPath.row]
+        let model = self.model.objects()[indexPath.row]
     
         switch model.type {
         case .colors:
@@ -65,6 +65,8 @@ extension AddEditViewController: UITableViewDelegate, UITableViewDataSource {
     }
         
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        // MARK: Set 160 for NotesCell
         if indexPath.row == 4 {
             return 160
         }

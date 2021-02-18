@@ -12,10 +12,10 @@ class FormModel {
     var title = CellModel(icon: UIImage(), title: "Name", subtitle: "", type: .title)
     var colors = CellModel(icon: UIImage(systemName: "eyedropper")!, title: "Color", subtitle: ItemColor.stringColor(from: .blue), type: .colors)
     var types = CellModel(icon: UIImage(systemName: "tray")!, title: "Type", subtitle: ItemType.book.rawValue, type: .types)
-    var progress = CellModel(subtitle: Units.items[0].name, type: .textFields, textFieldFirst: "", textFieldSecond: "")
+    var progress = CellModel(subtitle: ProgressUnit.minutes.rawValue, type: .textFields, textFieldFirst: "", textFieldSecond: "")
     var notes = CellModel(type: .notes, text: "")
 
-    func models() -> [CellModel] {
+    func objects() -> [CellModel] {
         return [title, colors, types,  progress, notes]
     }
 }
@@ -25,5 +25,5 @@ enum FormType {
 }
 
 struct GalleryModel {
-    var objects: [DataSourceObject] = []
+    var objects: [GalleryDataSourceObject] = []
 }

@@ -8,12 +8,12 @@
 import Foundation
 
 enum ItemType: String {
-    case movie
-    case book
-    case ebook
-    case game
-    case audiobook 
-    case other
+    case movie = "movie"
+    case book = "book"
+    case ebook = "ebook"
+    case game = "game"
+    case audiobook = "audiobook"
+    case other = "other"
 
     func categoryName() -> String {
         return "\(self)s"
@@ -26,6 +26,7 @@ enum ItemType: String {
         case "game": return .game
         case "audiobook": return .audiobook
         case "ebook": return .ebook
+        case "other": return .other
         default:
             return .other
         }

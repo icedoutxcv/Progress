@@ -7,25 +7,29 @@
 
 import UIKit
 
-
-class GalleryViewController: UIViewController, AddViewControllerDelegate, ItemDetailsViewControllerDelegate {
+class GalleryViewController: UIViewController {
+    
+    // MARK: Data
     let dataManager = DataManager()
-
-    var tableView = UITableView()
     var model =  GalleryModel()
 
+    // MARK: UI
+    var tableView = UITableView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setup()
+        setupViewController()
+        setupTableView()
         updateData()
     }
     
-    func setup() {
+    func setupViewController() {
         title = "Gallery"
-        navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(presentAddViewController))
-                
+    }
+    
+    func setupTableView() {
         tableView = UITableView(frame: view.frame, style: .plain)
         tableView.register(GalleryViewCell.nib(), forCellReuseIdentifier: GalleryViewCell.identifier)
         view = tableView
@@ -40,15 +44,46 @@ class GalleryViewController: UIViewController, AddViewControllerDelegate, ItemDe
         UIView.transition(with: tableView, duration: 1.0, options: .transitionCrossDissolve , animations: {
             self.tableView.reloadData()
         })
-
     }
     
+    @objc func presentAddViewController() {
+        let navigationController = UINavigationController()
+    
+        let addViewController = AddEditViewController(type: .new, navTitle: .add)
+        addViewController.modalTransitionStyle = .coverVertical
+        addViewController.delegate = self
+        
+        navigationController.addChild(addViewController)
+
+        self.present(navigationController, animated: true)
+    }
+
+        
+}
+
+extension GalleryViewController: AddEditViewControllerDelegate, ItemDetailsViewControllerDelegate  {
     func didAddItem() {
         updateData()
     }
     
     func didDeleteItem() {
         updateData()
+    }
+    
+    func didLongPressItem(item: Item) {
+        let refreshAlert = UIAlertController(title: "Deleting item", message: "", preferredStyle: UIAlertController.Style.alert)
+
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            self.dataManager.deleteObject(item: item)
+            self.updateData()
+        }))
+
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            self.dismiss(animated: true, completion: nil)
+        }))
+
+        present(refreshAlert, animated: true, completion: nil)
+    
     }
     
     func didSelectItem(item: Item) {
@@ -59,19 +94,6 @@ class GalleryViewController: UIViewController, AddViewControllerDelegate, ItemDe
         addEditViewController.delegate = self
         
         navigationController.addChild(addEditViewController)
-
-        self.present(navigationController, animated: true)
-    }
-        
-    @objc func presentAddViewController() {
-        let navigationController = UINavigationController()
-    
-        let addViewController = AddEditViewController(type: .new, navTitle: .add)
-        addViewController.modalTransitionStyle = .coverVertical
-        addViewController.delegate = self
-        
-        navigationController.addChild(addViewController)
-
         self.present(navigationController, animated: true)
     }
 }
