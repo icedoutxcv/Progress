@@ -54,6 +54,10 @@ extension GalleryViewController:  UITableViewDataSource, UITableViewDelegate {
         return headerView
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
     }
@@ -61,5 +65,6 @@ extension GalleryViewController:  UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
     }
+    
 }
 
